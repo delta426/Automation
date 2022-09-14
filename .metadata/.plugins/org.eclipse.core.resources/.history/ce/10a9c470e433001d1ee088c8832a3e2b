@@ -1,0 +1,7 @@
+package com.technoCRM.generic;
+
+public interface Automation_Constants 
+{
+      String PATH_SCREENSHOT="./Screenshot/";
+      String BASE_URL="https://phptravels.net/";
+}

@@ -1,0 +1,21 @@
+package com.technoCRM.generic;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public abstract class Page {
+	
+    WebDriver driver;
+    WebDriverWait wait;
+    public Page(WebDriver driver)
+    {
+    	this.driver=driver;
+    }
+ // abstract Methods
+    public abstract String verifyTitle();
+    public abstract String verifyPageHeader(By locator);
+    public abstract void verifyElement(By locator);
+    public abstract void waitForElementPresent();
+    public abstract void waitForPageTitle();
+}

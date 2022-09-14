@@ -1,0 +1,22 @@
+package com.phptravels.scripts;
+
+import org.testng.annotations.Test;
+
+import com.phptravels.BaseTest.BaseTest;
+import com.phptravels.pom.LoginPage;
+
+public class LoginPageTest extends BaseTest
+{
+    @Test
+    public void testLoginPage() {
+    	
+    	String email="user@phptravels.com";
+    	String password="demouser";
+    	LoginPage lp=new LoginPage(driver);
+    	lp.getEmail();
+    	lp.getPassword(email);
+    	lp.clickLogin(password);
+    	
+    	
+    }
+}

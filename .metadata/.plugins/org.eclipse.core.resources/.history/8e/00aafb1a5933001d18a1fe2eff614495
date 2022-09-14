@@ -1,0 +1,72 @@
+package com.technoCRM.generic;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.Reporter;
+
+public class BasePage extends Page 
+{
+
+	public BasePage(WebDriver driver) {
+		super(driver);
+		
+	}
+
+	@Override
+	public String verifyTitle() {
+		
+		return driver.getTitle();
+	}
+
+	@Override
+	public String verifyPageHeader(By locator) {
+		return verifyElement(locator).getText();
+	}
+
+	@Override
+	public WebElement verifyElement(By locator) {
+		
+		WebElement element=null;
+		try
+		{
+			element =driver.findElement(locator);
+		}catch(Exception e)
+		{
+			System.out.println("some error ocour while creating element "+locator.toString());
+			e.printStackTrace();
+		}
+		return element;
+	}
+
+	@Override
+	public void waitForElementPresent(By locator) {
+		
+		try
+		{
+			wait.until(ExpectedConditions.presenceOfElementLocated(locator));
+		}catch(Exception e)
+		{
+			System.out.println("error occur while waiting for element "+locator.toString());
+		}
+	}
+
+
+	public void waitForPageTitle(String title) {
+		try
+		{
+			wait.until(ExpectedConditions.titleContains(title));
+		}catch(Exception e)
+		{
+			System.out.println("title is not as expected "+title);
+		}
+		
+	}
+  
+}

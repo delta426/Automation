@@ -1,0 +1,36 @@
+package com.phptravels.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.phptravels.generic.BasePage;
+
+public class LoginPage extends BasePage{
+	@FindBy(xpath="")
+	private WebElement username;
+	@FindBy(xpath="")
+	private WebElement password;
+	@FindBy(xpath="")
+	private WebElement login;
+	
+	public LoginPage(WebDriver driver) 
+	{
+		super(driver);
+		
+	}
+    public void getUsername()
+    {
+    	username.sendKeys("username");
+    }
+    public void getPassword()
+    {
+    	password.sendKeys("password");
+    }
+    public void clickLogin()
+    {
+    	login.click();
+    }
+	
+	
+}

@@ -1,0 +1,5 @@
+package com.technoCRM.generic;
+
+public abstract class page {
+
+}
