@@ -9,14 +9,20 @@ import com.myStore.generic.BasePage;
 public class AddToCartPage extends BasePage {
 	
 
-	@FindBy()
+	@FindBy(id="quantity_wanted")
 	private WebElement quantity;
 	
-	@FindBy()
+	@FindBy(name="group_1")
 	private WebElement size;
 	
-	@FindBy()
-	private WebElement addToCart;
+	@FindBy(xpath="//span[text()='Add to cart']")
+	private WebElement addToCartBtn;
+	
+	@FindBy(xpath="//*[@id=\"layer_cart\"]//h2/i")
+	private WebElement addToCartMessag;
+	
+	@FindBy(xpath="//span[contains(text(),'Proceed to checkout')]")
+	private WebElement proceedToCheckOutBtn;
 	
 	public AddToCartPage(WebDriver driver) {
 		super(driver);
@@ -31,7 +37,15 @@ public class AddToCartPage extends BasePage {
 	}
 	public void clickOnAddToCart()
 	{
-		addToCart.click();
+		addToCartBtn.click();
 	}
-    
+	public boolean validateAddtoCart()
+	{
+		return addToCartMessag.isDisplayed();
+	}
+	public OrderPage clickOnProcidToCheckout()
+	{
+		proceedToCheckOutBtn.click();
+		return new OrderPage();
+	}
 }
