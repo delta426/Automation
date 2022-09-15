@@ -1,5 +1,6 @@
 package com.phptravels.scripts;
 
-public class HomePageTest {
+public class HomePageTest 
+{
 
 }
