@@ -21,6 +21,17 @@ public class AddToCartPage extends BasePage {
 	public AddToCartPage(WebDriver driver) {
 		super(driver);
 	}
-	
-
+	public void setQuantity(String quantityOfProduct)
+	{
+		quantity.sendKeys(quantityOfProduct);
+	}
+	public void setSize(String sizeOfProduct)
+	{
+		size.sendKeys(sizeOfProduct);
+	}
+	public void clickOnAddToCart()
+	{
+		addToCart.click();
+	}
+    
 }
