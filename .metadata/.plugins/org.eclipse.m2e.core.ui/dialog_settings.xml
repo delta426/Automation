@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Shashi\Desktop\Automation\com.phptravels\src\main\java\com\phptravels\pom\HomePage.java"/>
 			<item value="C:\Users\Shashi\Desktop\Automation\com.technoCRM\src\test\java\com\technoCRM\scripts"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -44,12 +45,14 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="myStoreProject"/>
 			<item value="com.Deityainfotech"/>
 			<item value="com.DeityaInfotech"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="MyStoreProject"/>
 			<item value="com.JavaSeleniumProgram"/>
 			<item value="com.technoCRM"/>
 		</list>
