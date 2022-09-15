@@ -31,8 +31,8 @@
     <fullyQualifiedTypeName name="com.phptravels.BaseTest.BaseTest"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.support.PageFactory"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
-    <fullyQualifiedTypeName name="com.myStore.generic.BasePage"/>
     <fullyQualifiedTypeName name="org.testng.Reporter"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.support.FindBy"/>
+    <fullyQualifiedTypeName name="com.myStore.generic.BasePage"/>
 </qualifiedTypeNameHistroy>
